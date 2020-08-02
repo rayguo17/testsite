@@ -14,8 +14,10 @@ myImage.onclick = function() {
 
 let mybutton=document.querySelector('button');
 let myheading=document.querySelector('h1');
+var  x =document.querySelector('input');
+let myemail = x.value;
 
-function setusername(){
+/*function setusername(){
     let myname=prompt('please enter your name.');
     localStorage.setItem('name',myname);
     myheading.textContent='mozilla is cool, '+myname;
@@ -29,4 +31,11 @@ if(!localStorage.getItem('name')) {
   }
 mybutton.onclick = function() {
     setusername();
+  }*/
+function submit1(){
+  sessionStorage.setItem('email',myemail);
+}
+  
+  mybutton.onclick = function(){
+    submit1();
   }
